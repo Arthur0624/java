@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+</head>
+<script>
+    $(function () {
+        $("#b1").click(function () {
+            $("div:first").css("backgroundColor","pink");
+        })
+        $("#b2").click(function () {
+            $("div:not(.one)").css("backgroundColor","pink");
+        })
+        $("#b3").click(function () {
+            $("div:even").css("backgroundColor","pink");
+        })
+        $("#b4").click(function () {
+            $("div:gt(2)").css("backgroundColor","pink");
+        })
+        $("#b5").click(function () {
+                $(":header").css("backgroundColor","pink");
+        })
+    })
+</script>
+<body>
+<input type="button" value="第一个div变pink" id="b1">
+<input type="button" value="class不为one的div" id="b2">
+<input type="button" value="偶数变pink" id="b3">
+<input type="button" value="div大于2的变pink" id="b4">
+<input type="button" value="标题变；pink" id="b5">
+<h1>自信源于努力</h1>
+<div >我是第一个div</div>
+<div class="one">我是class为one的div</div>
+<div>我是第三个div</div>
+<div>我是第四个div</div>
+</body>
+</html>
