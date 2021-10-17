@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyc.dao.StudentDao">
+
+    <select id="selectIf" resultType="com.lyc.domain.Student">
+        select * from student
+        where
+        <if test="name != null and name!=''">
+            name = #{name}
+        </if>
+        <if test="age > 0">
+          or age &lt; #{age}
+        </if>
+    </select>
+
+
+    <select id="selectForeachOne" resultType="com.lyc.domain.Student">
+        select * from student
+        <if test="list != null and list.size>0">
+        where id in
+        <foreach collection="list" open="(" separator="," item="myid" close=")">
+            #{myid}
+        </foreach>
+        </if>
+    </select>
+
+<!--    foreach循环List-->
+    <select id="selectForeachTWo" resultType="com.lyc.domain.Student">
+            select * from student
+        <if test="list != null and list.size>0">
+            where id in
+            <foreach collection="list" open="(" close=")" separator="," item="stu">
+                #{stu.id}
+            </foreach>
+        </if>
+    </select>
+
+</mapper>

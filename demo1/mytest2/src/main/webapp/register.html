@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<script>
+    function checkID(){
+        var id = $("#id").val();
+        var reg_ID =/^\w{0,20}$/;
+        var flag = reg_ID.test(id);
+        if(flag){
+            $("#id").css("");
+        }
+        else {
+            $("#id").css("border","1px solid red");
+        }
+    }
+    function checkUsername(){
+        var username = $("#username").val();
+        var reg_username =/^\w{0,20}$/;
+        var flag = reg_username.test(username);
+        if(flag){
+            $("#username").css("");
+        }
+        else {
+            $("#username").css("border","1px solid red");
+        }
+    }
+    function checkPassword(){
+        var password = $("#password").val();
+        var reg_password =/^\w{0,20}$/;
+        var flag = reg_password.test(password);
+        if(flag){
+            $("#password").css("");
+        }
+        else {
+            $("#password").css("border","1px solid red");
+        }
+    }
+
+    $(function () {
+       $("#talk").submit(function () {
+            if(checkPassword()&&checkUsername()&&checkID()){
+                $.post("regisUserServlet",$(this).serialize(),function (data) {
+
+                })
+            }
+            return false;
+       })
+    })
+
+    $("#id").blur(checkID);
+    $("#username").blur(checkUsername);
+    $("#password").blur(checkPassword);
+</script>
+<body>
+<form id="talk">
+ID:<input name="id" id="id">
+用户名：<input name="username" id="username">
+密码：<input type="text" name="password" id="password">
+    <input value="注册" type="submit">
+</form>
+</body>
+</html>

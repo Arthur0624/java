@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyc.dao.studentDao">
+   <select id="selectStudentById" resultType="student">
+       select id,name,age from student where id = #{id}
+   </select>
+<select id="selectAll" resultType="stu">
+    select id ,name,age from student where id = #{myName}
+</select>
+
+    <select id="selectByNameOrderBy" resultType="stu">
+        select id,${myname},age from ${mytable} where name = #{myname};
+    </select>
+</mapper>

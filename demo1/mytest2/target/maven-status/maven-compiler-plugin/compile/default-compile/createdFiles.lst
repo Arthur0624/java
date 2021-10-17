@@ -1,0 +1,5 @@
+com\lyc\web\registUserServlet.class
+com\lyc\dao\UserDaoimpl.class
+com\lyc\util\JDBCUtils.class
+com\lyc\dao\UserDao.class
+com\lyc\domain\User.class

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../test01/test01.iml" filepath="$PROJECT_DIR$/../test01/test01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test02-dao/test02-dao.iml" filepath="$PROJECT_DIR$/../test02-dao/test02-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test03/test03.iml" filepath="$PROJECT_DIR$/../test03/test03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test04-parameter/test04-parameter.iml" filepath="$PROJECT_DIR$/../test04-parameter/test04-parameter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test05/test05.iml" filepath="$PROJECT_DIR$/../test05/test05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test05-result/test05-result.iml" filepath="$PROJECT_DIR$/../test05-result/test05-result.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test06-dynamic-sql/test06-dynamic-sql.iml" filepath="$PROJECT_DIR$/../test06-dynamic-sql/test06-dynamic-sql.iml" />
+    </modules>
+  </component>
+</project>

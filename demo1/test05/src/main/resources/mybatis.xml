@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--    设置日记-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+<!-- 第一种格式：
+        type：java类型的全限定名称（自定义类型)
+        alias:自定义别名
+        第二种方式
+        name：包名，mybatis会把这个包中所有类名作为别名（不区分大小写）
+-->
+        <typeAlias type="com.lyc.domain.Student" alias="stu"/>
+        <package name="com.lyc.domain"/>
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!--            配置数据源：创建Connection对象-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///mytest?useUnicode=true&amp;
+                characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--    指定其他mapper文件位置，找到其sql语句-->
+    <mappers>
+        <!--
+        从target/classes路径开启的
+        一个mapper resource指定一个mapper文件
+-->
+        <mapper resource="com/lyc/dao/studentDao.xml"/>
+    </mappers>
+</configuration>

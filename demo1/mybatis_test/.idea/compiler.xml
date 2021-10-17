@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="test05-result" />
+        <module name="test03" />
+        <module name="test01" />
+        <module name="test02-dao" />
+        <module name="test04-parameter" />
+        <module name="test06-dynamic-sql" />
+        <module name="test05" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test01" target="1.8" />
+      <module name="test02-dao" target="1.8" />
+      <module name="test03" target="1.8" />
+      <module name="test04-parameter" target="1.8" />
+      <module name="test05" target="1.8" />
+      <module name="test05-result" target="1.8" />
+      <module name="test06-dynamic-sql" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

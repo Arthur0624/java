@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyc.dao.StudentDao">
+    <!-- 使用insert，update，delete，select标签写sql-->
+<!--
+        parameterType:指定dao接口形参的类型
+       sql语句： select * from student where id = ?
+       ps.setInt(1,1005)参数是整形
+       java类型别名parameterType="java.lang.Integer"
+-->
+
+    <select id="selectById" parameterType="int"
+            resultType="com.lyc.domain.Student">
+            select * from student where id = #{studentId}
+    </select>
+
+<!--    多个简单类型参数
+        当使用@param命名后，在mapper中，使用#{命名的参数}
+-->
+    <select id="selectByNameOrAge" resultType="com.lyc.domain.Student">
+        select * from student where name=#{myname} or age=#{myage}
+    </select>
+
+<!--简单语法：#{属性名字}
+-->
+    <select id="selectByObject" resultType="com.lyc.domain.Student">
+        select id,name ,age from student where name=#{name} or age=#{age}
+    </select>
+
+    <select id="selectByPosition" resultType="com.lyc.domain.Student">
+        select id,name,age from student where name=#{arg0} or age=#{arg1}
+    </select>
+</mapper>

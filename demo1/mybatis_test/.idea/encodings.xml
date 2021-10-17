@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-16">
+    <file url="file://$PROJECT_DIR$/../test01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test02-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test03/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test04-parameter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test05-result/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test05/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../test06-dynamic-sql/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
